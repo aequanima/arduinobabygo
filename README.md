@@ -1,5 +1,5 @@
 # Arduino Ride-On Vehicle Controller
-![pod car](https://github.com/user-attachments/assets/f1b44f85-2b2b-48dc-9eb3-cc79c6233b46)
+<img src="https://github.com/user-attachments/assets/f1b44f85-2b2b-48dc-9eb3-cc79c6233b46" alt="pod car" width="50%">
 
 ## Description
 
@@ -50,8 +50,8 @@ This firmware is designed for ride-on vehicles where the existing motor controll
 The following is an example of a ride-on vehicle that *may* be compatible with the control methods described in this project. However, **it is crucial to independently verify the control mechanism of any specific vehicle before attempting modification, as manufacturers can change components and wiring without notice.**
 * Kidzone 2-Speeds Electric Ride On Bumper Car: [https://www.amazon.com/Kidzone-2-Speeds-Electric-Bluetooth-Certified/dp/B0CM5MMXRX](https://www.amazon.com/Kidzone-2-Speeds-Electric-Bluetooth-Certified/dp/B0CM5MMXRX)
     * *Disclaimer: This link is provided as a potential starting point for investigation and does not constitute an endorsement or guarantee of compatibility.*
-      *For reference, the following four pins are used on the unit that I have worked with most recently:
-         ![1000046798](https://github.com/user-attachments/assets/1607a5da-9572-4cf9-bca0-f78e6250d1d8)
+    * *For reference, the following four pins are used on the unit that I have worked with most recently:*
+    * <img src="https://github.com/user-attachments/assets/1607a5da-9572-4cf9-bca0-f78e6250d1d8" alt="1000046798" width="50%">
 
 ## Software Requirements
 
