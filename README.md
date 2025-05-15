@@ -1,4 +1,5 @@
 # Arduino Ride-On Vehicle Controller
+![pod car](https://github.com/user-attachments/assets/f1b44f85-2b2b-48dc-9eb3-cc79c6233b46)
 
 ## Description
 
@@ -6,6 +7,7 @@ This Arduino project provides firmware for controlling a modified ride-on vehicl
 
 **Important Note on Motor Control (Current Sink Method):**
 This firmware is designed for ride-on vehicles where the existing motor controller activates specific functions (e.g., Right Motor Forward, Left Motor Reverse) when its corresponding control line is connected to Ground (GND), effectively "sinking current" through the Arduino pin. The Arduino digital pins, when set to `OUTPUT LOW`, act as this connection to Ground. When set to `INPUT` (high-impedance), they effectively disconnect the control line, deactivating the function. **This method requires careful identification of the correct control lines on your vehicle's existing motor controller. Incorrect wiring can damage the vehicle's controller or the Arduino.**
+
 
 ## Features
 
@@ -29,7 +31,7 @@ This firmware is designed for ride-on vehicles where the existing motor controll
 
 * **Electrical Safety:** Modifying electronic devices, especially children's ride-on toys, involves inherent risks. If you are not competent and comfortable with electronics, wiring, and soldering, **do not attempt this project.** Incorrect wiring can lead to short circuits, damage to the Arduino, damage to the vehicle's electronics, or even create a fire hazard. Always double-check your connections before applying power.
 * **Common Ground Connection (Crucial!):** For the Arduino to reliably control the vehicle's motor controller, they **must share a common reference voltage, known as a "common ground."**
-    * **What this means (for laypeople):** For different electrical parts to "understand" each other's signals (like "on" or "off"), they need to agree on what "zero volts" or the "ground level" is. If they don't share this common ground, the signals from the Arduino might not be correctly interpreted by the vehicle's controller, leading to erratic behavior or no control at all.
+    * **What this means (for laypeople):** Think of electricity like water flowing. For different electrical parts to "understand" each other's signals (like "on" or "off"), they need to agree on what "zero volts" or the "ground level" is. If they don't share this common ground, the signals from the Arduino might not be correctly interpreted by the vehicle's controller, leading to erratic behavior or no control at all.
     * **How to achieve it:** The simplest way is often to power the Arduino from the vehicle's own battery system (making sure the voltage is appropriate for the Arduino, possibly using a voltage regulator). If the Arduino and the vehicle's controller are powered by the same battery, they will inherently share a common ground. If they are powered separately, you **must** connect a wire from one of the Arduino's GND pins to the Ground (negative terminal) of the vehicle's battery or motor controller.
     * **Failure to do this can result in unpredictable operation or complete failure of the control system.**
 * **Vehicle Compatibility:** This project assumes a specific type of motor control interface on the ride-on vehicle (control lines activated by connecting to Ground). Not all ride-on toys use this system. You **must** verify how your vehicle's controller works before attempting to interface with it.
@@ -43,6 +45,13 @@ This firmware is designed for ride-on vehicles where the existing motor controll
 * **Assistive Switches:** Up to four normally open command switches and one mode cycle switch (e.g., button switches, sip-and-puff switches).
 * **Wiring Components:** Wires, connectors, (optional) 3.5mm jacks, soldering equipment.
 * **Power Supply:** Appropriate power supply for the Arduino and the ride-on vehicle. **Ensure a common ground connection as described in the Cautions section.**
+
+### Example of Potentially Compatible Vehicle
+The following is an example of a ride-on vehicle that *may* be compatible with the control methods described in this project. However, **it is crucial to independently verify the control mechanism of any specific vehicle before attempting modification, as manufacturers can change components and wiring without notice.**
+* Kidzone 2-Speeds Electric Ride On Bumper Car: [https://www.amazon.com/Kidzone-2-Speeds-Electric-Bluetooth-Certified/dp/B0CM5MMXRX](https://www.amazon.com/Kidzone-2-Speeds-Electric-Bluetooth-Certified/dp/B0CM5MMXRX)
+    * *Disclaimer: This link is provided as a potential starting point for investigation and does not constitute an endorsement or guarantee of compatibility.*
+      *For reference, the following four pins are used on the unit that I have worked with most recently:
+         ![1000046798](https://github.com/user-attachments/assets/1607a5da-9572-4cf9-bca0-f78e6250d1d8)
 
 ## Software Requirements
 
@@ -82,10 +91,10 @@ These Arduino pins use `INPUT_PULLUP`. Connect one terminal of your switch to th
 
 ## How to Use
 
-1.  **Understand the Risks:** Read the "Important Cautions & Disclaimer" section thoroughly, especially regarding common ground.
+1.  **Understand the Risks:** Read the "Important Cautions & Disclaimer" section thoroughly, especially regarding common ground and vehicle compatibility.
 2.  **Hardware Setup:**
     * **Carefully identify** the motor control signal lines on your ride-on vehicle's existing controller.
-    * **Ensure a common ground connection** between the Arduino and the's electrical system.
+    * **Ensure a common ground connection** between the Arduino and the vehicle's electrical system.
     * Connect the Arduino motor control output pins (1-4) to these identified signal lines.
     * Connect your assistive switches to the Arduino input pins (5-9) and Ground.
     * Power the Arduino and the vehicle. **Start with low-current or current-limited power supplies for initial testing if possible.**
