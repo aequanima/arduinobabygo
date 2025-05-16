@@ -97,7 +97,7 @@ These Arduino pins use `INPUT_PULLUP`. Connect one terminal of your switch to th
     * **Ensure a common ground connection** between the Arduino and the vehicle's electrical system.
     * Connect the Arduino motor control output pins (1-4) to these identified signal lines.
     * Connect your assistive switches to the Arduino input pins (5-9) and Ground.
-    * Power the Arduino and the vehicle. **Start with low-current or current-limited power supplies for initial testing if possible.**
+    * Power the Arduino and the vehicle. 
 3.  **Software Setup:**
     * Open `RideOnVehicleController.ino` in Arduino IDE.
     * Ensure the Arduino R4 board support package and the `LowPower` library are installed.
