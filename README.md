@@ -52,6 +52,10 @@ The following is an example of a ride-on vehicle that *may* be compatible with t
     * *Disclaimer: This link is provided as a potential starting point for investigation and does not constitute an endorsement or guarantee of compatibility.*
     * *For reference, the following four pins are used on the unit that I have worked with most recently:*
     * <img src="https://github.com/user-attachments/assets/1607a5da-9572-4cf9-bca0-f78e6250d1d8" alt="1000046798" width="50%">
+    * * Yellow - left reverse 
+    * * Green - left forward
+    * * Orange - right reverse
+    * * Blue - right forward
 
 ## Software Requirements
 
