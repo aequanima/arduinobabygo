@@ -1,6 +1,6 @@
 #include <Arduino.h>     // Standard Arduino header
 #include <EEPROM.h>      // For saving mode across power cycles
-// #include <LowPower.h> // Removed due to compilation issues / simplification
+// #include <LowPower.h> // Removed due to issues
 
 // --- 1. Definitions and Constants ---
 
