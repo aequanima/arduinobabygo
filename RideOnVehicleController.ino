@@ -1,3 +1,5 @@
+//this version uses the arduino uno r4 minima
+
 #include <Arduino.h>     // Standard Arduino header
 #include <EEPROM.h>      // For saving mode across power cycles
 // #include <LowPower.h> // Removed due to issues
