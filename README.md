@@ -1,4 +1,4 @@
-# Arduino Ride-On Vehicle Controller (Accessible)
+# Arduino Ride-On Vehicle Controller
 <img src="https://github.com/user-attachments/assets/f1b44f85-2b2b-48dc-9eb3-cc79c6233b46" alt="pod car" width="50%">
 
 ## Description
